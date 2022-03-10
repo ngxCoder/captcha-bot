@@ -1,0 +1,32 @@
+{
+  "name": "captcha-bot",
+  "version": "1.0.0",
+  "description": "A reminder to complete captchas KEKW",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngxCoder/captcha-bot.git"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "reminder"
+  ],
+  "author": "ngxCoder",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ngxCoder/captcha-bot/issues"
+  },
+  "homepage": "https://github.com/ngxCoder/captcha-bot#readme",
+  "dependencies": {
+    "@discordjs/builders": "^0.12.0",
+    "@discordjs/rest": "^0.3.0",
+    "discord-api-types": "^0.28.0",
+    "discord.js": "^13.6.0",
+    "dotenv": "^16.0.0",
+    "node-cron": "^3.0.0"
+  }
+}
