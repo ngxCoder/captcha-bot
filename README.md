@@ -28,4 +28,4 @@ node .
 ## License
 [MIT](https://github.com/ngxCoder/captcha-reminder-bot/blob/main/LICENSE)
 
-[Invite him!](https://discord.com/api/oauth2/authorize?client_id=951266773846601818&permissions=8&scope=applications.commands%20bot)
+[Invite him!](https://discord.com/api/oauth2/authorize?client_id=951266773846601818&permissions=8&scope=applications.commands%20bot) This is just for me; it won't work for you!
