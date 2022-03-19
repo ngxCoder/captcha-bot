@@ -10,6 +10,11 @@ const channelId = '951317145193680917';
 const roleId = '951314514261987409';
 const timeoutMessage = 300000;
 
+let milicoTimerActivated = false;
+const mauroId = '171339569189355520';
+const meId = '206037341922525184';
+
+
 // Create a new client instance
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
@@ -43,7 +48,24 @@ client.on('interactionCreate', async interaction => {
 	} else if (commandName === 'disable') {
         enabled = false;
 		await interaction.reply({ content: 'Captcha Disabled', ephemeral: true });
-	}
+	} else if(commandName === 'milico' || commandName === 'm') {
+
+        if(milicoTimerActivated){
+            return
+        }
+
+        if(mauroId === interaction.user.id){
+            const minutesParam = interaction.options.getInteger('minutes') ?? 80;
+            await interaction.reply({ content: 'Milico timer activated', ephemeral: true });
+            milicoTimerActivated = true
+
+            setTimeout(() => {
+                milicoTimerActivated = false
+                client.users.fetch(mauroId, { force: true })
+                .then(user => user.send('[Milico timer] Time\'s up'))
+            }, 1000 * 60 * minutesParam)
+        }
+    }
 });
 
 
